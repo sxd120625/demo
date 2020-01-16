@@ -5,4 +5,14 @@ spring:
 spring:
   profiles: local
   datasource:
-    url:
+    url: jdbc:mysql://dohko.mysql.001.master.hualala.com:3306/db_mis?useUnicode=true
+    username: root
+    password: hualaladev
+    driver-class-name: com.mysql.jdbc.Driver
+    initial-size: 3
+    max-active: 20
+    min-idle: 1
+    #该选项用来验证数据库连接的有效性
+    validation-query: SELECT 1
+    #指明是否在从池中取出连接前进行检验,如果检验失败,则从池中去除连接并尝试取出另一个
+    test-on-borrow: true
